@@ -1,11 +1,11 @@
 function Flights() {
 	function calculateNumberOfFlights(passengerQty, capacity) {
-		if (passengerQty < 0) {
+		if (passengerQty < 0 || !Number.isInteger(passengerQty)) {
 			throw new Error(
 				"The number of passengers must be a positive integer value"
 			);
 		}
-		if (capacity < 0) {
+		if (capacity < 0 || !Number.isInteger(capacity)) {
 			throw new Error(
 				"The capacity of the plane must be a positive integer value"
 			);
